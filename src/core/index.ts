@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain } from 'electron';
 
 declare const MAIN_WINDOW_WEBPACK_ENTRY: string;
 declare const MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY: string;
@@ -9,20 +9,29 @@ if (require('electron-squirrel-startup')) {
 
 const createWindow = (): void => {
   const mainWindow = new BrowserWindow({
-    height: 300,
-    width: 400,
-    resizable:false,
+    height: 728,
+    width: 1024,
+    resizable: false,
     autoHideMenuBar: true,
     frame: false,
     transparent: true,
     webPreferences: {
-      preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
+      preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY
     },
     center: true,
     alwaysOnTop: true
   });
 
+  mainWindow.webContents.openDevTools()
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
+
+  ipcMain.on('close-window', () => {
+    mainWindow.close();
+  });
+
+  ipcMain.on('minimize-window', () => {
+    mainWindow.minimize();
+  });
 };
 
 app.on('ready', createWindow);

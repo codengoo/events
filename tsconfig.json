@@ -12,9 +12,16 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "paths": {
-      "*": ["node_modules/*"]
+      "*": [
+        "node_modules/*"
+      ]
     },
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": [
+      "./src/app/preload.d.ts"
+    ]
   },
-  "include": ["src/**/*"]
+  "include": [
+    "src/**/*"
+  ]
 }
