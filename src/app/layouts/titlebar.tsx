@@ -10,10 +10,10 @@ export default function Titlebar() {
     }
 
     return (
-        <div className="border-b-2 border-border p-2 px-4 w-full flex flex-row justify-between title-frame">
+        <div className="relative border-b-2 border-border p-2 px-4 w-full flex flex-row justify-between title-frame">
             <div className="flex flex-row items-center">
                 <BtnIcon
-                    icon={TbSquareRoundedX}
+                    icon={TbSquareRoundedXFilled}
                     iconHover={<Icon icon={TbSquareRoundedXFilled} color="red" />}
                     onClick={handleCloseWindows}
                     hoverEffect={false}
