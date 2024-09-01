@@ -7,7 +7,7 @@ interface IIcons extends IconBaseProps {
 
 export default function Icon({ icon: IconComp, ...props }: IIcons) {
     return typeof IconComp === "function" ? (
-        <IconComp size={22} color="#6A6868" {...props} />
+        <IconComp size={20} color="#6A6868" {...props} />
     ) : (
         IconComp
     )

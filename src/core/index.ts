@@ -22,7 +22,7 @@ const createWindow = (): void => {
     alwaysOnTop: true
   });
 
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 
   ipcMain.on('close-window', () => {

@@ -22,7 +22,7 @@ export default function BtnIcon({ icon, iconHover, onClick, hoverEffect = true }
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={onClick}
-            className={`p-1 rounded-lg no-drag ${hoverEffect ? "hover:bg-border" : ""}`}
+            className={`p-1 rounded-lg no-drag ${hoverEffect ? "hover:bg-secondary" : ""}`}
         >
             <Icon icon={displayedIcon} />
         </button>
