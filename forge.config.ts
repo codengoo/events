@@ -20,7 +20,7 @@ const config: ForgeConfig = {
   plugins: [
     new AutoUnpackNativesPlugin({}),
     new WebpackPlugin({
-      devContentSecurityPolicy: 'default-src \'self\' \'unsafe-inline\' data:; img-src *; script-src \'self\' \'unsafe-eval\' \'unsafe-inline\' data:',
+      devContentSecurityPolicy: 'default-src \'self\' \'unsafe-inline\' data:; img-src *; font-src *; style-src \'self\' https://fonts.googleapis.com \'unsafe-inline\' data:; script-src \'self\' \'unsafe-eval\' \'unsafe-inline\' data:',
       mainConfig,
       renderer: {
         config: rendererConfig,

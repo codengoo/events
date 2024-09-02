@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { RootState } from '../../index';
-import { Color, ETheme } from '../../../types';
+import type { RootState } from '..';
+import { Color, ETheme } from '../../types';
 
 // Define a type for the slice state
 interface ThemeState {
@@ -10,8 +10,8 @@ interface ThemeState {
 
 // Define the initial state using that type
 const initialState: ThemeState = {
-    theme: "light",
-    background: undefined
+  theme: "light",
+  background: "https://thaitrien.com/wp-content/uploads/2020/08/75-nam-cmt8-va-quoc-khanh-2-9-thaitrien-2-1920x1080.png"
 }
 
 export const counterSlice = createSlice({
@@ -19,10 +19,10 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     setTheme: (state, action: PayloadAction<ETheme>) => {
-        state.theme = action.payload;
+      state.theme = action.payload;
     },
     setBackground: (state, action: PayloadAction<string>) => {
-        state.background = action.payload;
+      state.background = action.payload;
     }
   }
 })

@@ -8,6 +8,9 @@ module.exports = {
                 primary: "#FBF8F6",
                 secondary: "#F4E9E2",
                 border: "#F4E9E2"
+            },
+            fontFamily: {
+                poppins: ["Poppins", 'sans-serif']
             }
         }
     },
