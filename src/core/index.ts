@@ -18,8 +18,7 @@ const createWindow = (): void => {
     webPreferences: {
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY
     },
-    center: true,
-    alwaysOnTop: true
+    center: true
   });
 
   // mainWindow.webContents.openDevTools()
